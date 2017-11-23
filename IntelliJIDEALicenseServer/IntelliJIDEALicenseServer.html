@@ -1,0 +1,38 @@
+<!DOCTYPE html >
+
+<head>
+<title>IntelliJ IDEA License Server</title>
+</head>
+
+<body onload="showTime()">
+
+<h1>Service is Runing...</h1><span id="time"></span></br>
+
+<script>
+var url=window.location.href;
+document.write('<h2>You can use <u>' + url + '</u> as license server</h2>');
+</script>
+
+    <script>
+        function showTime()
+        {
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth()+1;
+            var day = today.getDate();
+            var hours = today.getHours();
+            var minutes = today.getMinutes();
+            var seconds = today.getSeconds();
+            month  = month<10  ? "0"+month : month;
+            day  = day <10  ? "0"+day : day;
+            hours  = hours<10  ? "0"+hours : hours;
+            minutes = minutes<10 ? "0"+minutes : minutes;
+            seconds = seconds<10 ? "0"+seconds : seconds;
+            var str = year+"-"+month+"-"+day+" "+hours+":"+minutes+":"+seconds;
+            var obj = document.getElementById("time");
+            obj.innerHTML = str;
+            window.setTimeout("showTime()",1000);
+        }
+    </script>
+</body>
+</html>
