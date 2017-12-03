@@ -10,6 +10,11 @@
 
 * IntelliJ IDEA License Server v1.4
 
+## 2017-12-3:
+
+* IntelliJ IDEA License Server v1.5
+
+
 ## 使用方法:
 	//docker build -t jetlicd .
 	docker build -t jetlicd git://github.com/Hcreak/Docker_jetlicd.git
